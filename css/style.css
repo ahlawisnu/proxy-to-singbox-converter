@@ -1,32 +1,83 @@
+/* ===============================
+   MATERIAL DESIGN 3 - HATSUNE MIKU THEME
+   Supports Light & Dark Mode
+================================ */
+
+/* DEFAULT = DARK MODE */
 :root {
-    --terminal-bg: #1a1b26;
-    --terminal-text: #a9b1d6;
-    --terminal-green: #9ece6a;
-    --terminal-blue: #7aa2f7;
-    --terminal-purple: #bb9af7;
-    --terminal-red: #f7768e;
-    --terminal-yellow: #e0af68;
-    --terminal-input-bg: #24283b;
-    --terminal-border: #414868;
+
+  /* MD3 Core */
+  --md-primary: #5eead4;        /* Miku Teal */
+  --md-secondary: #7dd3fc;      /* Sky Blue */
+  --md-tertiary: #c4b5fd;       /* Soft Purple */
+  --md-error: #ff6b6b;
+  --md-warning: #facc15;
+  --md-success: #4ade80;
+
+  /* Dark Surfaces */
+  --md-bg: #0f172a;
+  --md-surface: #111827;
+  --md-surface-variant: #1f2933;
+  --md-outline: #334155;
+
+  /* Text */
+  --md-on-bg: #e5e7eb;
+  --md-on-surface: #d1d5db;
+  --md-on-primary: #042f2e;
+
+  /* Glow */
+  --md-glow: rgba(94,234,212,0.45);
+
+  /* ===========================
+     Mapping to Existing Terminal Variables
+  =========================== */
+
+  --terminal-bg: var(--md-bg);
+  --terminal-text: var(--md-on-bg);
+  --terminal-green: var(--md-success);
+  --terminal-blue: var(--md-secondary);
+  --terminal-purple: var(--md-primary);
+  --terminal-red: var(--md-error);
+  --terminal-yellow: var(--md-warning);
+  --terminal-input-bg: var(--md-surface);
+  --terminal-border: var(--md-outline);
 }
 
-.loading-screen {
-    position: fixed;
-    inset: 0;
-    background: var(--terminal-bg);
-    display: grid;
-    place-items: center;
-    z-index: 9999;
-}
+/* ===============================
+   LIGHT MODE
+   Activate with:
+   <html data-theme="light">
+================================ */
 
-.loading-screen::before {
-    content: '';
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--terminal-border);
-    border-top-color: var(--terminal-purple);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+html[data-theme="light"] {
+
+  --md-primary: #14b8a6;
+  --md-secondary: #0284c7;
+  --md-tertiary: #8b5cf6;
+  --md-error: #dc2626;
+  --md-warning: #ca8a04;
+  --md-success: #16a34a;
+
+  --md-bg: #f8fafc;
+  --md-surface: #ffffff;
+  --md-surface-variant: #f1f5f9;
+  --md-outline: #cbd5f5;
+
+  --md-on-bg: #020617;
+  --md-on-surface: #020617;
+  --md-on-primary: #ffffff;
+
+  --md-glow: rgba(20,184,166,0.35);
+
+  --terminal-bg: var(--md-bg);
+  --terminal-text: var(--md-on-bg);
+  --terminal-green: var(--md-success);
+  --terminal-blue: var(--md-secondary);
+  --terminal-purple: var(--md-primary);
+  --terminal-red: var(--md-error);
+  --terminal-yellow: var(--md-warning);
+  --terminal-input-bg: var(--md-surface);
+  --terminal-border: var(--md-outline);
 }
 
 @keyframes spin {
@@ -425,4 +476,50 @@ body {
     .glow-button {
         width: 100%;
     }
+}
+
+/* Card Elevation */
+.terminal-container,
+.subscription-card {
+  background: linear-gradient(
+    180deg,
+    var(--terminal-input-bg),
+    var(--terminal-bg)
+  );
+}
+
+/* Soft Glow Accent */
+.terminal-container {
+  box-shadow:
+    0 0 0 1px var(--terminal-border),
+    0 10px 40px rgba(0,0,0,0.6),
+    0 0 30px var(--md-glow);
+}
+
+/* Inputs */
+.subscription-input,
+.terminal-textarea {
+  transition: border-color .25s, box-shadow .25s;
+}
+
+.subscription-input:focus,
+.terminal-textarea:focus {
+  border-color: var(--terminal-purple);
+  box-shadow: 0 0 0 2px var(--md-glow);
+}
+
+/* Buttons */
+.glow-button.primary {
+  background: linear-gradient(
+    135deg,
+    var(--md-primary),
+    var(--md-secondary)
+  );
+  box-shadow: 0 0 15px var(--md-glow);
+}
+
+/* Checkbox */
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background: var(--md-primary);
+  box-shadow: 0 0 8px var(--md-glow);
 }
