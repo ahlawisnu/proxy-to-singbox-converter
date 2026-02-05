@@ -54,6 +54,57 @@
   --terminal-input-bg: var(--md-surface);
   --terminal-border: var(--md-outline);
 }
+
+html[data-theme="light"] {
+
+  /* ===========================
+     MD3 Core - Sakura Miku Light
+  =========================== */
+
+  --md-primary: #f472b6;        /* Sakura Pink */
+  --md-secondary: #f9a8d4;      /* Soft Pink */
+  --md-tertiary: #c7d2fe;       /* Lavender */
+  --md-error: #fb7185;          /* Rose */
+  --md-warning: #fbbf24;        /* Peach */
+  --md-success: #86efac;        /* Mint */
+
+  /* ===========================
+     Light Surfaces
+  =========================== */
+
+  --md-bg: #fff7fb;             /* Cherry White */
+  --md-surface: #ffffff;
+  --md-surface-variant: #fde7f3;
+  --md-outline: #f5b0d6;
+
+  /* ===========================
+     Text Colors
+  =========================== */
+
+  --md-on-bg: #3b0a25;          /* Dark Rose */
+  --md-on-surface: #3b0a25;
+  --md-on-primary: #ffffff;
+
+  /* ===========================
+     Glow Effect
+  =========================== */
+
+  --md-glow: rgba(244,114,182,0.35);
+
+  /* ===========================
+     Mapping to Existing Terminal Variables
+  =========================== */
+
+  --terminal-bg: var(--md-bg);
+  --terminal-text: var(--md-on-bg);
+  --terminal-green: var(--md-success);
+  --terminal-blue: var(--md-tertiary);
+  --terminal-purple: var(--md-primary);
+  --terminal-red: var(--md-error);
+  --terminal-yellow: var(--md-warning);
+  --terminal-input-bg: var(--md-surface);
+  --terminal-border: var(--md-outline);
+}
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
