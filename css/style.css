@@ -523,3 +523,35 @@ body {
   background: var(--md-primary);
   box-shadow: 0 0 8px var(--md-glow);
 }
+
+/* ===============================
+   THEME TOGGLE BUTTON
+================================ */
+
+.theme-toggle {
+  margin-left: auto;
+  background: var(--terminal-input-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  transition: 
+    background .3s,
+    color .3s,
+    transform .2s,
+    box-shadow .3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px var(--md-glow);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
