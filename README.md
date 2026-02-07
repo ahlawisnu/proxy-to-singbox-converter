@@ -56,7 +56,7 @@ If you want to run this project locally on your device (e.g., Linux, macOS, Wind
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/4n0nymou3/proxy-to-singbox-converter.git
+   git clone https://github.com/ahlawisnu/proxy-to-singbox-converter.git
    ```
 
 2. Navigate to the project directory:
@@ -113,11 +113,6 @@ If you need to stop the local server without closing the terminal, use one of th
 2. Paste your proxy configs, Sing-box JSON, links, or Base64-encoded data
 3. Click "Convert to Sing-box" or "Convert to Proxy Configs" based on the input type
 4. Copy or download the generated configuration
-
-## 👨‍💻 Author
-
-Developed by Anonymous
-- Twitter: [@4n0nymou3](https://x.com/4n0nymou3)
 
 ## 🛡️ Disclaimer
 
